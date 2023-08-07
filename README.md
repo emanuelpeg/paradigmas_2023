@@ -1,1 +1,2 @@
-# paradigmas_2023
+# paradigmas
+Repositorio del curso de paradigmas
