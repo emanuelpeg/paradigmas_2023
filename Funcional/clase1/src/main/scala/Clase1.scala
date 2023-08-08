@@ -5,34 +5,29 @@ object Clase1 {
    *
    * Defina una función que calcule el cuadrado de un número
    */
-  def cuadrado(n: Long): Long = n * n
+  def cuadrado(n: Long): Long = ???
 
   /**
    * Ejercicio -1
    *
    * Defina una función que calcule la enésima potencia positiva de un número
    */
-  def potencia(n: Long, v: Int): Long = if (v == 0) 1
-  else potencia(n, v-1) * n
+  def potencia(n: Long, v: Int): Long = ???
 
   /**
    * Ejercicio 0
    *
-   * Realice una función que calcule el enesimo numero de fibonacci
+   * Realice una función que calcule el factorial de un nro n
    */
   def factorial(n: Long): Long = ???
 
 
-  def fibonacci(n: Int): Long = {
-
-    def faux(n: Int, fa: Long, faa: Long) : Long =
-      if (n == 2) fa + faa
-      else faux(n - 1, fa + faa, fa)
-
-    if (n == 0) 0
-    else if (n == 1) 1
-    else faux(n, 1, 0)
-  }
+  /**
+   * Ejercicio 1
+   *
+   * Realice una función que calcule el enesimo numero de fibonacci
+   */
+  def fibonacci(n: Int): Long = ???
 
 
   /**
@@ -72,4 +67,18 @@ object Clase1 {
    */
   def isPalindrome(word: List[Char]): Boolean = ???
 
+  /**
+   * Ejercicio 6
+   * Realice una función que dado un entero lo convierta a binario   */
+  def binario(nro : Int): Int = ???
+
+  /**
+   * Ejercicio 8
+   * Realice una función que dado un entero lo convierta a octal */
+  def octal(nro: Int): Int = ???
+
+  /**
+   * Ejercicio 9
+   * Realice una función que dado dos enteros calcule el mayor comun divisor */
+  def mcd(a: Int, b: Int): Int = ???
 }
