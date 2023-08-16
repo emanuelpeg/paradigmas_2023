@@ -17,14 +17,6 @@ object Clase2 {
    */
   def min(lista: List[Int]): Int = ???
 
-
-  /*
-   * Busca la mediana
-   * En el ámbito de la estadística, la mediana representa el
-   * valor de la variable de posición central en un conjunto de datos ordenados.
-  */
-  def mediana(lista: List[Int]): Int = ???
-
   // filtra la lista de valores mayores que el valor e pasado por parametro
   def maximos(lista: List[Int], e: Int): List[Int] = ???
 
@@ -34,8 +26,16 @@ object Clase2 {
   // Ordena los valores de una lista utilizando quicksort
   def QuickSort(xs: List[Int]): List[Int] = ???
 
-  //Obtiene un elemento en la posición n
+  /**Obtiene un elemento en la posición n */
   def ObtenerElemento(lista: List[Int], posicion: Int): Int = ???
+
+  /**
+   * Busca la mediana
+   * En el ámbito de la estadística, la mediana representa el
+   * valor de la variable de posición central en un conjunto de datos ordenados.
+  */
+  def mediana(lista: List[Int]): Int = ???
+
 
   /**
    * Cuenta los elementos
@@ -44,7 +44,6 @@ object Clase2 {
 
   // Acumula los elementos
   def acc(lista: List[Int]): Int = ???
-
 
   /**
    * Filtra los elementos de la lista xs segun la funcion p
@@ -108,5 +107,13 @@ object Clase2 {
    * Por ejemplo : (1,2,3) -> ((),(1),(2),(3),(1,2),(1,3), (1,2,3), (2,3))
   ********************************/
   def subSets(lista: List[Int]): List[List[Int]] = ???
+
+  /** *****************************
+   * Opcional
+   * Dada una lista de enteros y un numoro entero n, retorne subconjuntos con n elementos
+   * Ej> (1,2,3,4,5) y 2 -> ((1,2), (3,4), (5))
+   * ****************************** */
+  def cortar(lista: List[Int], n : Int): List[List[Int]] = ???
+
 
 }

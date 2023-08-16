@@ -130,5 +130,9 @@ class Clase2Suite extends munit.FunSuite  {
     assert(Set(subSets(List(1, 2))) == Set(Nil,List(1), List(2), List(1,2)))
   }
 
+  test("cortar () de n retorna Nil") {
+    assert(Set(cortar(Nil,2)) == Set(Nil))
+  }
+
 
 }

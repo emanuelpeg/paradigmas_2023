@@ -5,14 +5,14 @@ object Clase1 {
    *
    * Defina una función que calcule el cuadrado de un número
    */
-  def cuadrado(n: Long): Long = ???
+  def cuadrado(n: Long): Long = n * n
 
   /**
    * Ejercicio -1
    *
    * Defina una función que calcule la enésima potencia positiva de un número
    */
-  def potencia(n: Long, v: Int): Long = ???
+  def potencia(n: Long, v: Int): Long = if (v == 0) 1 else n * potencia(n,v-1)
 
   /**
    * Ejercicio 0
