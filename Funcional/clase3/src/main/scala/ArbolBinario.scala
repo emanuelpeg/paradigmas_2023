@@ -34,16 +34,17 @@
      *
      */
 
-    abstract class Tree
-
+    sealed abstract class Tree
     case class EmptyTree() extends Tree
-
-    case class Node(nro: Int, left: Tree, rigth: Tree) extends Tree
+    case class Node(nro: Int, left: Tree, right: Tree) extends Tree
 
     /*
      * Inserta un elemento
      */
-    def insert(nro: Int, tree: Tree): Tree = ???
+    def insert(nro: Int, tree: Tree): Tree = tree match
+      case EmptyTree() => Node(nro, EmptyTree(), EmptyTree())
+      case Node(nroNode, left, right) => if (nro < nroNode) Node(nroNode,insert(nro, left),right)
+                                          else Node(nroNode,left,insert(nro, right))
 
     /**
      * Devuelve verdadero si el elemento esta en el arbol.
@@ -53,7 +54,9 @@
     /**
      * Devuelve la cantidad de nodos del arbol
      */
-    def countNodes(tree: Tree): Int = ???
+    def countNodes(tree: Tree): Int = tree match
+      case EmptyTree() => 0
+      case Node(_, left, right) => 1 + countNodes(left) + countNodes(right)
 
     /**
      * Devuelve un arbol donde se aplico esta funcion
